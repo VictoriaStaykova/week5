@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main ()
+{
+    //zad.5-prosti chisla v intervala (p,q)
+    int p,q;
+    bool isPrime;
+    cout<<"Enter p:";
+    cin>>p;
+    cout<<"Enter q (q>p):";
+    cin>>q;
+    if (p>q)
+        cout<<"Wrong numbers!";
+    else
+    {
+       for(p;p<=q;p++)
+       {
+           isPrime=true;
+           for(int k=2;k<p && isPrime; k++)
+           {
+               isPrime=p%k;
+           }
+           if(isPrime)
+            cout<<p<<" ";
+       }
+    }
+return 0;
+}
