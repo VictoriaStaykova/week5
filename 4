@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+int main ()
+{
+    //zad.4-prosto chislo
+    int number;
+    bool flag=true;
+    cout << "Enter a number:";
+    cin >> number;
+    for(int i=2; i<number && flag; i++)
+    {
+        flag=number%i;
+    }
+    cout<<(flag?"prime":"not prime");
+
+return 0;
+}
